@@ -1,12 +1,12 @@
 #!/bin/bash
 
-cc  -O1  -w                             main_prog.c                -o my_qsort
-                                                                              
-cc  -O1  -w                          -c sqsort.c                              
-cc  -O1  -w  -fcommon  -Dqsort=sqsort   main_prog.c    sqsort.o    -o sqsort  
-                                                                              
-cc  -O1  -w                          -c timsort.c                             
-cc  -O1  -w  -fcommon  -Dqsort=timsort  main_prog.c    timsort.o   -o timsort 
+cc  -O1                             main_prog.c                -o my_qsort
+                                                                          
+cc  -O1                                         -c sqsort.c               
+cc  -O1  -fcommon  -Dqsort=sqsort   main_prog.c    sqsort.o    -o sqsort  
+                                                                          
+cc  -O1                                         -c timsort.c              
+cc  -O1  -fcommon  -Dqsort=timsort  main_prog.c    timsort.o   -o timsort 
 
 prin=benchmark
 
