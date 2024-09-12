@@ -88,10 +88,10 @@ int main( int argc, char **argv ) {
  if (rec_siz == 0) rec_siz = sizeof(char*);
                                 
  fprintf(stderr,"\n%-7s d=%d e=%d s=%d %dMB R%d ",
-      argv[0]+2,div_val,   arr_max,   rec_siz,   arr_max*rec_siz/1000000 ,itarate);
+      argv[0]+2,div_val,   (int)arr_max,   (int)rec_siz,   (int)(arr_max*rec_siz/1000000) ,itarate);
  fprintf(stderr,"%c=%d:%d:%d:%d: ",(sizeof(char*)==8?'M':'m'),_QS_MID1,_QS_MID2,_QS_MID3,cmp_loop);
 
- printf("%-8s d=%d e=%d s=%d R%d ", argv[0]+2,div_val,   arr_max,   rec_siz ,itarate);
+ printf("%-8s d=%d e=%d s=%d R%d ", argv[0]+2,div_val,   (int)arr_max,   (int)rec_siz ,itarate);
  printf("%c%03d:%03d:%03d:%d:",(sizeof(char*)==8?'M':'m'),_QS_MID1,_QS_MID2,_QS_MID3,cmp_loop);
  fflush(stdout);
 
